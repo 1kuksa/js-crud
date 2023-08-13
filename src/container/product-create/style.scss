@@ -1,0 +1,118 @@
+@use '../../lib/service.scss' as s;
+.form {
+	display: flex;
+	padding: s.space(4);
+	flex-direction: column;
+	gap: s.space(8);
+
+	&__title {
+		font-size: 20px;
+		font-weight: bold;
+		padding-bottom: s.space(1);
+		border-bottom: 1px solid s.color('light');
+	}
+
+	&__content{
+		display: grid;
+		gap: s.space(6);
+	}
+
+	&__field {
+		display: flex;
+		flex-direction: column;
+		gap: s.space(5);
+	}
+
+	&__label{
+		font-size: 20px;
+		padding-bottom: s.space(1);
+	}
+
+	&__input{
+		border: 1px solid s.color('light');
+		padding: s.space(2);
+	}
+	&__input-content {
+		border: 1px solid s.color('light');
+		padding: s.space(2);
+		height: 100px;
+	}
+	&__button {
+		border: 1px solid s.color('light');
+		padding: s.space(2);
+		border-radius: 20px;
+	}
+	&__button-product {
+		font-size: 20px;
+		color: white;
+		background-color: s.color('primary');
+		padding: s.space(3);
+		border-radius: 8px;
+		margin-left: 15px ;
+		margin-right: 15px ;
+		
+	}
+	&__product-title {
+		font-size: 28px;
+		color: s.color('primary');
+		font-weight: bold;
+		padding-bottom: s.space(1);
+	}
+	&__card {
+		display: flex;
+		flex-direction: column;
+		border: 1px solid s.color('light');
+		box-shadow: 0px 5px 10px s.color('light');
+		padding: s.space(4);
+		gap: s.space(5);
+	}
+	&__card-title {
+		font-size: 24px;
+		font-weight: 600;
+		padding-bottom: s.space(3);
+		padding-left: s.space(4);
+		
+	}
+	&__field-info {
+		display: flex;
+		flex-direction: column;
+		
+		width: 48%;
+		
+		
+		
+	}
+	&__double{
+		display: flex;
+		justify-content: space-around;
+		gap: s.space(2);
+		padding-bottom: s.space(3);
+	}
+	&__info{
+		display: flex;
+		flex-direction: column;
+	}
+}
+.card__info-text{
+	color: s.color('light');
+}
+.info {
+	display: flex;
+	padding: s.space(4);
+	flex-direction: column;
+	
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	gap: s.space(10);
+}
+
+.user-list {
+	li{
+		padding-right: 15px;
+		padding-top: 5px;
+		padding-bottom: 5px;
+	}
+}

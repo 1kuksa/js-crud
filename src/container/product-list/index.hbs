@@ -1,0 +1,20 @@
+<main class="product__list">
+	<header>
+		<h1 class="product__list-title">Список товарів</h1>
+	</header>
+	<section class="card__list">
+		{{#with data.products}}
+		{{#if isEmpty}}
+		<mark> Пустий</mark>
+		{{else}}
+		{{#each list }}
+
+		{{>product-card data=this}}
+		{{/each}}
+
+		{{/if}}
+		{{/with}}
+
+	</section>
+
+</main>
