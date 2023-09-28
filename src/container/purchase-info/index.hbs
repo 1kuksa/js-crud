@@ -1,0 +1,43 @@
+<main class="main">
+	{{> heading title = "Інофрмація про замовлення" }}
+
+	<section>
+
+		{{#with data}}
+		{{#with purchase}}
+		<div class="purchase-info">
+			<div>
+				{{> field-info label="ID:" text = id }}
+			</div>
+
+			{{> divider}}
+			<div class="order-info">
+				{{> field-info label="Ім'я:" text = firstname }}
+				{{> field-info label="Прізвище:" text = lastname }}
+				{{> field-info label="Телефон:" text = phone }}
+				{{> field-info label="Електрона пошта:" text = email }}
+			</div>
+
+			{{> divider}}
+			<div class="order-info">
+				{{> field-info label="Назва товару:" text = product.title }}
+				{{> field-info label="Коментар:" text = comment }}
+			</div>
+			{{> divider}}
+			<div class="order-info">
+				{{> field-info label="Вартість товарів:" text = productPrice }}
+				{{> field-info label="Вартість доставки:" text = deliveryPrice }}
+				{{> field-info label="Сума до сплати:" text = totalPrice }}
+				{{/with}}
+				{{> field-info label="Нараховані бонуси:" text = bonus }}
+			</div>
+			{{> divider}}
+			<a href="/purchase-edit?id={{purchase.id}}">{{> button text ="Змінити інформацію" }}</a>
+
+		</div>
+
+
+		{{/with}}
+
+	</section>
+</main>

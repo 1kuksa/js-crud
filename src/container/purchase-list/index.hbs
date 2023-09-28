@@ -1,0 +1,45 @@
+<main class="main">
+	{{> heading title = "Мої замовлення" }}
+	<section>
+		{{#with data.purchases}}
+		{{#if isEmpty}}
+		<span>Список замовлень пустий</span>
+		{{else}}
+		<ul class="cart">
+			{{#each list}}
+			<a href="/purchase-info?id={{id}}">
+				<li class="cart__item">
+
+					<div class="cart-title">
+						ID:{{id}}
+					</div>
+					<div class="order-list">
+						<div class="cart-title">
+							Товари
+						</div>
+						<div class="product__name">{{product}}</div>
+					</div>
+					<div class="order-list">
+						<div class="cart-title">
+							Сумма замовлення
+						</div>
+						<div class="product__name">{{totalPrice}}</div>
+					</div>
+					<div class="order-list">
+						<div class="cart-title">
+							Нараховані бонуси
+						</div>
+						<div class="product__name">{{bonus}}</div>
+					</div>
+
+				</li>
+			</a>
+			{{> divider}}
+			{{/each}}
+		</ul>
+
+		{{/if}}
+		{{/with}}
+	</section>
+
+</main>

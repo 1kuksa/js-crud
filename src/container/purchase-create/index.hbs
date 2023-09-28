@@ -22,15 +22,15 @@
 		{{> field label="Пошта" name="email" }}
 		{{> field label="Коментар" name="comment" }}
 		{{> field label="Списати бонуси" name="bonus" }}
-		{{> field label="Промо-код" name="promocod" }}
+		{{> field label="Промо-код" name="promocode" }}
 		{{> divider}}
 
 		{{> field value=totalPrice name="totalPrice" disabled=true }}
 		{{> field value=productPrice name="productPrice" disabled=true }}
 		{{> field value=deliveryPrice name="deliveryPrice" disabled=true }}
-
+		{{> field value=amount name="amount" disabled=true}}
 		<strong class="form-card__total">
-			Всього: {{totalPrice}} грн
+			Всього: {{totalPrice}} грн ({{bonus}} грн бонусів)
 		</strong>
 		{{> button text = 'Оформити замовлення'}}
 	</form>
