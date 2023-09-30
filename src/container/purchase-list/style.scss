@@ -1,0 +1,32 @@
+@use '../../lib/service.scss' as s;
+
+@use '../../component/heading/style.scss' as heading;
+@use '../../component/purchase-product/style.scss' as purchaseProduct;
+@use '../../component/field/style.scss' as field;
+@use '../../component/divider/style.scss' as divider;
+@use '../../component/button/style.scss' as button;
+
+.main{
+	display: flex;
+	flex-direction: column;
+	gap:s.space(6);
+	padding: s.space(6);
+}
+
+.cart__item{
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+padding: s.space(6);
+}
+.order-list {
+	width: 100%;
+	height: fit-content;
+	display: grid;
+	grid-template-rows: 1fr, 1fr;
+	gap:s.space(4);
+}
+
+.cart-title {
+	color: s.color(title)
+	
+}
