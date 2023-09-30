@@ -1,0 +1,61 @@
+@use '../../lib/service.scss' as s;
+.product__list-title {
+	font-size: 32px;
+	font-weight: bold;
+	color: s.color(primary);
+}
+.product__list {
+	padding: 24px;
+}
+.card__list {
+	padding: 24px;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	column-gap: 16px;
+	row-gap: 30px;
+}
+.card{
+	&__product-title {
+		padding: 12px;
+		font-size: 24px;
+		font-weight: bold;
+
+	}
+	&__product-description{
+		padding: 12px;
+		font-size: 16px;
+	}
+
+	&__product-id {
+		padding: 12px;
+		font-size: 16px;
+		color: gray;
+	}
+
+	&__product-footer {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		padding-right: 12px;
+		align-content: center;
+	}
+	
+}
+
+.price{
+	padding: 12px;
+	font-size: 28px;
+	font-weight: 500;
+}
+.card__product {
+	border-radius: 24px;
+	border: 1px solid #DEE2E6;
+	box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+}
+.url {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-decoration: none;
+	
+}
